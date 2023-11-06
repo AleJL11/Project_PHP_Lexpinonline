@@ -1,0 +1,124 @@
+.register
+        position: relative
+        height: 100vh
+        width: 100%
+        display: grid
+        align-items: center
+        
+        &__form
+            position: relative
+            //background-color: hsla(0, 0%, 10%, .1)
+            //border: 2px solid $black-color
+            margin-inline: 1rem
+            padding: .1rem 3rem
+            display: grid
+            place-items: center
+            //border-radius: 1rem
+            //backdrop-filter: blur(8px)
+        
+        &__title
+            text-align: center
+            font-size: $h1-font-size
+            font-weight: $font-medium
+            margin-bottom: 2rem
+        
+        &__content,
+        &__box
+            display: grid
+        
+        &__content
+            row-gap: 1.75rem
+            margin-bottom: 1.5rem
+        
+        &__box
+            grid-template-columns: max-content 1fr
+            align-items: center
+            column-gap: .75rem
+            border-bottom: 2px solid $black-color
+        
+        &__icon,
+        &__eye
+            font-size: 1.25rem
+            color: #000
+        
+        &__input
+            width: 100%
+            padding-block: .8rem
+            background: none
+            color: $black-color
+            position: relative
+            z-index: 1
+            border: none
+
+        &__label-select
+            position: absolute
+            z-index: 1
+            display: inline-block
+            top: 16px
+            left: 16px
+            color: #000
+
+        &__select
+            width: 100%
+            position: relative
+            padding: 16px 30px 16px 150px
+            border-radius: 50px
+            border: none
+            background: none
+            color: #000
+            appearance: none
+
+        &__select::-ms-expand
+            display: none
+
+        &__select:focus
+            outline: none
+
+        &__option
+            color: #000
+            
+        &__input:focus
+            outline: none
+        
+        &__box-input
+            position: relative
+        
+        &__label
+            position: absolute
+            left: 0
+            top: 13px
+            font-weight: $font-medium
+            transition: top .3s, font-size .3s
+            color: #000
+        
+        &__eye
+            position: absolute
+            right: 0
+            top: 18px
+            z-index: 10
+            cursor: pointer
+        
+        &__box:nth-child(2) input
+            padding-right: 1.8rem
+
+        &__button
+            width: 40%
+            padding: 1rem
+            border-radius: .5rem
+            background-color: #0d6efd
+            font-weight: $font-medium
+            margin-left: 30px
+            cursor: pointer
+            color: #000
+            border: none
+
+
+
+.register__input:focus + .register__label,
+.register__input:valid + .register__label
+   top: -17px
+   font-size: $small-font-size
+
+.register__input:not(:placeholder-shown).register__input:not(:focus) + .register__label
+   //top: -12px
+   font-size: $small-font-size

@@ -1,0 +1,297 @@
+/*.5rem = 8px | 1rem = 16px ...*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", "Roboto Slab", sans-serif;
+}
+
+body {
+  background: url("../img/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .login {
+  position: relative;
+  height: 100vh;
+  width: 40%;
+  display: grid;
+  align-items: center;
+}
+body .login__form {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid hsl(0, 0%, 100%);
+  margin-inline: 4rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+body .login__title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+body .login__content, body .login__box {
+  display: grid;
+}
+body .login__content {
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+body .login__box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+body .login__icon, body .login__eye {
+  font-size: 1.25rem;
+  color: #fff;
+}
+body .login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+body .login__label-select {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  top: 16px;
+  left: 16px;
+  color: #fff;
+}
+body .login__select {
+  width: 100%;
+  position: relative;
+  padding: 16px 30px 16px 150px;
+  border-radius: 50px;
+  border: none;
+  background: none;
+  color: #fff;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body .login__select::-ms-expand {
+  display: none;
+}
+body .login__select:focus {
+  outline: none;
+}
+body .login__option {
+  color: #000;
+}
+body .login__input:focus {
+  outline: none;
+}
+body .login__box-input {
+  position: relative;
+}
+body .login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: 500;
+  transition: top 0.3s, font-size 0.3s;
+  color: #fff;
+}
+body .login__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+body .login__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+body .login__button {
+  width: 40%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #0d6efd;
+  font-weight: 500;
+  margin-left: 30px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+}
+
+.login__input:focus ~ .login__label,
+.login__input:valid ~ .login__label {
+  top: -17px;
+  font-size: 0.813rem;
+}
+
+.login__input:not(:-moz-placeholder-shown).login__input:not(:focus) + .login__label {
+  font-size: 0.813rem;
+}
+
+.login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label {
+  font-size: 0.813rem;
+}
+
+.register {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  align-items: center;
+}
+.register__form {
+  position: relative;
+  margin-inline: 1rem;
+  padding: 0.1rem 3rem;
+  display: grid;
+  place-items: center;
+}
+.register__title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.register__content, .register__box {
+  display: grid;
+}
+.register__content {
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.register__box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  border-bottom: 2px solid hsl(0, 0%, 0%);
+}
+.register__icon, .register__eye {
+  font-size: 1.25rem;
+  color: #000;
+}
+.register__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: hsl(0, 0%, 0%);
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+.register__label-select {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  top: 16px;
+  left: 16px;
+  color: #000;
+}
+.register__select {
+  width: 100%;
+  position: relative;
+  padding: 16px 30px 16px 150px;
+  border-radius: 50px;
+  border: none;
+  background: none;
+  color: #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.register__select::-ms-expand {
+  display: none;
+}
+.register__select:focus {
+  outline: none;
+}
+.register__option {
+  color: #000;
+}
+.register__input:focus {
+  outline: none;
+}
+.register__box-input {
+  position: relative;
+}
+.register__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: 500;
+  transition: top 0.3s, font-size 0.3s;
+  color: #000;
+}
+.register__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+.register__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+.register__button {
+  width: 40%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #0d6efd;
+  font-weight: 500;
+  margin-left: 30px;
+  cursor: pointer;
+  color: #000;
+  border: none;
+}
+
+.register__input:focus + .register__label,
+.register__input:valid + .register__label {
+  top: -17px;
+  font-size: 0.813rem;
+}
+
+.register__input:not(:-moz-placeholder-shown).register__input:not(:focus) + .register__label {
+  font-size: 0.813rem;
+}
+
+.register__input:not(:placeholder-shown).register__input:not(:focus) + .register__label {
+  font-size: 0.813rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .home_content .container_info {
+    grid-template-columns: repeat(3, 220px) !important;
+    height: 270px !important;
+  }
+  .home_content .table {
+    display: block !important;
+    width: 95% !important;
+  }
+  .table_info {
+    display: none !important;
+  }
+  .sidebar.active ~ .home_content .container_info {
+    grid-template-columns: repeat(2, 220px) !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .home_content .container_info {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .sidebar.active ~ .home_content .container_info {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}/*# sourceMappingURL=style.css.map */

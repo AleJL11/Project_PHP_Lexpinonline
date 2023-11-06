@@ -1,0 +1,23 @@
+@media only screen and (min-width: 768px)
+    .home_content
+        .container_info
+            grid-template-columns: repeat(3, 220px) !important
+            height: 270px !important
+        
+        .table
+            display: block !important
+            width: 95% !important
+
+    .table_info
+        display: none !important
+
+    .sidebar.active ~ .home_content .container_info
+        grid-template-columns: repeat(2, 220px) !important
+
+@media only screen and (min-width: 992px)
+    .home_content
+        .container_info
+            grid-template-columns: repeat(4, 1fr) !important
+
+    .sidebar.active ~ .home_content .container_info
+        grid-template-columns: repeat(4, 1fr) !important
